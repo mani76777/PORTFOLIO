@@ -1,0 +1,736 @@
+/* --------------------------------------------------
+   GLOBAL STYLES — DARK MODE
+-------------------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #0d0f14;   /* Dark Background */
+  color: #e4e8f0;        /* Light Text */
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: #b7bdc7;        /* Light Grey Text */
+}
+
+:root {
+  --accent: #0aa8ff;     /* NEON BLUE */
+  --glow: 0 0 12px rgba(0,170,255,0.7);
+  --muted: #9aa3b1;
+}
+
+/* smooth link/button transition */
+a,
+.btn {
+  transition: 0.25s ease;
+}
+
+/* --------------------------------------------------
+   NAVIGATION
+-------------------------------------------------- */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 6rem;
+  background: #11131a;
+  border-bottom: 1px solid #1c212b;
+  z-index: 50;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.2rem;
+}
+
+.nav-links a {
+  color: #d6dcef;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+  text-shadow: var(--glow);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-shadow: var(--glow);
+}
+
+/* Hamburger (Mobile) */
+#hamburger-nav {
+  display: none;
+}
+
+/* --------------------------------------------------
+   SECTIONS GLOBAL
+-------------------------------------------------- */
+
+section {
+  padding: 6rem 10%;
+  min-height: 90vh;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-shadow: var(--glow);
+}
+
+/* --------------------------------------------------
+   PROFILE SECTION
+-------------------------------------------------- */
+
+#profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.section__pic-container {
+  width: 350px;
+  height: 350px;
+}
+
+.section__pic-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  box-shadow: var(--glow);
+}
+
+.section__text {
+  text-align: center;
+}
+
+.section__text__p1 {
+  font-size: 1.2rem;
+  color: #bfc7d5;
+}
+
+.section__text__p2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #dce2ee;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1.2rem;
+}
+
+.icon {
+  height: 2.2rem;
+  cursor: pointer;
+  filter: invert(90%);
+  transition: 0.25s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  filter: invert(100%);
+  box-shadow: var(--glow);
+}
+
+/* Buttons */
+
+.btn-container {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  box-shadow: var(--glow);
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: #0d0f14;
+  box-shadow: 0 0 15px rgba(0,170,255,1);
+}
+
+/* --------------------------------------------------
+   ABOUT SECTION
+-------------------------------------------------- */
+
+#about {
+  text-align: center;
+}
+
+.about-containers {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.details-container {
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid #222832;
+  background: #151921;
+  box-shadow: 0 0 14px rgba(0,0,0,0.4);
+  flex: 1;
+}
+
+.details-container h3 {
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+  font-weight: 600;
+  text-shadow: var(--glow);
+}
+
+/* --------------------------------------------------
+   EXPERIENCE / SKILLS SECTION
+-------------------------------------------------- */
+
+#experience {
+  text-align: center;
+}
+
+.experience-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.experience-sub-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  text-align: center;
+  text-shadow: var(--glow);
+}
+
+/* SKILLS STACKED VERTICALLY */
+.article-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+/* Skill item */
+article {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  width: 100%;
+  border-radius: 12px;
+  background: #1a1f28;
+  border-left: 4px solid var(--accent);
+  transition: 0.25s ease;
+}
+
+article:hover {
+  transform: translateX(5px);
+  background: #1f2630;
+  box-shadow: var(--glow);
+}
+
+article h3 {
+  font-size: 1.2rem;
+  color: #e7ecf7;
+}
+
+article p {
+  font-size: 0.9rem;
+  color: #9aa3b1;
+}
+
+/* CENTER THE DOWN ARROW */
+.arrow {
+  display: block;
+  margin: 3rem auto 0 auto;
+  cursor: pointer;
+  width: 40px;
+  filter: invert(100%);
+}
+
+/* --------------------------------------------------
+   PROJECTS
+-------------------------------------------------- */
+
+#projects {
+  text-align: center;
+}
+
+.color-container {
+  background: #151921;
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid #222832;
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+  transition: 0.25s ease;
+}
+
+.color-container:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--glow);
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 12px;
+  border: 2px solid var(--accent);
+}
+
+/* --------------------------------------------------
+   CONTACT
+-------------------------------------------------- */
+
+#contact {
+  text-align: center;
+}
+
+/* contact container: layout for icon + text (keeps all items aligned) */
+.contact-info-upper-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+  gap: 2rem;
+  border-radius: 15px;
+  border: 1px solid #222832;
+  background: #151921;
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+}
+
+/* each contact item (email / linkedin / call) */
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  min-width: 220px;          /* keep items reasonably spaced */
+  padding: 0.6rem 0.8rem;
+  border-radius: 12px;
+  background: rgba(10,168,255,0.03); /* subtle tint */
+  border: 1px solid rgba(10,168,255,0.06);
+  transition: 0.2s ease;
+}
+
+/* icon inside contact item */
+.contact-info-container .contact-icon {
+  height: 34px;
+  width: 34px;
+  object-fit: contain;
+  filter: invert(90%); /* make icon visible on dark bg */
+  transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* text inside contact item */
+.contact-info-container p,
+.contact-info-container a {
+  margin: 0;
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-shadow: var(--glow);
+}
+
+/* smaller descriptive text (if you keep <p> below) */
+.contact-info-container small {
+  display: block;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin-top: 2px;
+  text-shadow: none;
+}
+
+/* hover effect for each contact item */
+.contact-info-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(10,168,255,0.12), var(--glow);
+}
+
+/* clickable anchor inside (email/tel/linkedin) */
+.contact-info-container a:hover {
+  color: #fff;
+  filter: none;
+  text-shadow: none;
+}
+
+/* optional small icon tint on hover */
+.contact-info-container:hover .contact-icon {
+  transform: scale(1.08);
+  filter: invert(100%);
+  box-shadow: var(--glow);
+}
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+
+footer {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: #11131a;
+  color: #9aa3b1;
+  text-align: center;
+  border-top: 1px solid #1c212b;
+}
+
+/* --------------------------------------------------
+   RESPONSIVE MEDIA QUERIES
+-------------------------------------------------- */
+
+@media (max-width: 900px) {
+  nav {
+    display: none;
+  }
+
+  #hamburger-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background: #11131a;
+  }
+
+  #profile {
+    flex-direction: column;
+  }
+
+  .about-containers {
+    flex-direction: column;
+  }
+
+  .experience-details-container {
+    flex-direction: column;
+  }
+
+  .contact-info-upper-container {
+    gap: 1rem;
+    padding: 0.8rem;
+    justify-content: center;
+  }
+
+  .contact-info-container {
+    min-width: 180px;
+    padding: 0.5rem 0.6rem;
+    gap: 0.6rem;
+  }
+
+  .section__pic-container {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  section {
+    padding: 4rem 8%;
+  }
+
+  .section__pic-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .contact-info-container {
+    min-width: 100%;
+    justify-content: center;
+  }
+
+  .contact-info-container p,
+  .contact-info-container a {
+    font-size: 1rem;
+  }
+}
+/* =============================
+   FLOATING THEME TOGGLE BUTTON
+==============================*/
+
+#theme-toggle {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 55px;
+  height: 55px;
+  background: #0d0f14;
+  border: 2px solid #0aa8ff;
+  box-shadow: 0 0 12px rgba(0,170,255,0.7);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 999;
+  transition: 0.3s ease;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.08);
+}
+
+#theme-icon {
+  font-size: 1.8rem;
+}
+
+
+/* =============================
+   FORCE LIGHT MODE BACKGROUND
+==============================*/
+
+body.light-mode {
+  background: #ffffff !important;
+}
+
+/* Section backgrounds */
+body.light-mode section {
+  background: #ffffff !important;
+}
+
+/* About, experience, project, contact cards */
+body.light-mode .details-container,
+body.light-mode .color-container,
+body.light-mode .contact-info-upper-container,
+body.light-mode article {
+  background: #ffffff !important;
+  border-color: #dddddd !important;
+  box-shadow: 0 0 10px rgba(0,0,0,0.06) !important;
+}
+
+/* Navbar */
+body.light-mode nav,
+body.light-mode #hamburger-nav {
+  background: #ffffff !important;
+  border-bottom: 1px solid #dddddd !important;
+}
+
+/* Footer */
+body.light-mode footer {
+  background: #ffffff !important;
+  color: #111 !important;
+  border-top: 1px solid #dddddd !important;
+}
+/* ===============================================
+   FINAL FIX — REMOVE NEON BLUE IN LIGHT MODE
+=============================================== */
+
+/* Remove neon accent everywhere */
+body.light-mode {
+  --accent: #111 !important;
+  --glow: none !important;
+}
+
+/* Force all titles to black */
+body.light-mode .title,
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body-light-mode h6,
+body.light-mode .experience-sub-title {
+  color: #111 !important;
+  text-shadow: none !important;
+}
+
+/* Remove blue glow from images/borders */
+body.light-mode .section__pic-container img {
+  border-color: #111 !important;
+  box-shadow: none !important;
+}
+
+/* Remove blue neon border from skill items */
+body.light-mode article {
+  border-left: 4px solid #111 !important;
+}
+
+/* Remove blue from buttons */
+body.light-mode .btn {
+  border-color: #111 !important;
+  color: #111 !important;
+  box-shadow: none !important;
+}
+body.light-mode .btn:hover {
+  background: #111 !important;
+  color: #fff !important;
+}
+
+/* Remove neon from nav and links */
+body.light-mode a,
+body.light-mode .nav-links a {
+  color: #111 !important;
+  text-shadow: none !important;
+}
+
+/* Remove neon from contact links */
+body.light-mode .contact-info-container a {
+  color: #111 !important;
+  text-shadow: none !important;
+}
+/* ==========================================================
+   FINAL LIGHT MODE FIX — MAKE ALL TITLES, ICONS, BUTTONS BLACK
+   (Dark mode remains completely unchanged)
+=========================================================== */
+
+/* Remove neon globally */
+body.light-mode {
+  --accent: #111 !important;
+  --glow: none !important;
+}
+
+/* SECTION TITLES */
+body.light-mode .title,
+body.light-mode .experience-sub-title,
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5 {
+  color: #111 !important;
+  text-shadow: none !important;
+}
+
+/* BUTTONS */
+body.light-mode .btn {
+  border-color: #111 !important;
+  color: #111 !important;
+  background: #fff !important;
+  box-shadow: none !important;
+}
+body.light-mode .btn:hover {
+  background: #111 !important;
+  color: #fff !important;
+}
+
+/* SKILL ITEMS LEFT BORDER */
+body.light-mode article {
+  border-left: 4px solid #111 !important;
+}
+
+/* ICONS (social & contact) */
+body.light-mode .icon,
+body.light-mode .contact-icon {
+  filter: none !important;
+  opacity: 0.9 !important;
+}
+
+/* CONTACT SECTION LINK TEXT */
+body.light-mode .contact-info-container a {
+  color: #111 !important;
+  text-shadow: none !important;
+}
+
+/* CONTACT ITEM BACKGROUND FIX */
+body.light-mode .contact-info-container {
+  background: #f5f7fa !important;
+  border-color: #ddd !important;
+}
+
+/* NAVBAR TEXT & LINKS */
+body.light-mode nav a {
+  color: #111 !important;
+  text-shadow: none !important;
+}
+
+/* PROJECT CARDS */
+body.light-mode .color-container {
+  background: #fff !important;
+  border-color: #ddd !important;
+  box-shadow: none !important;
+}
+
+/* REMOVE NEON BORDER FROM IMAGES */
+body.light-mode .section__pic-container img {
+  border-color: #111 !important;
+  box-shadow: none !important;
+}
+/* ==========================================
+   FIX LIGHT-MODE TEXT TOO LIGHT — MAKE DARK
+   (Does NOT affect dark mode)
+========================================== */
+
+/* "Hello, I'm" */
+body.light-mode .section__text__p1 {
+  color: #000 !important;
+}
+
+/* "Cybersecurity professional" */
+body.light-mode .section__text__p2 {
+  color: #000 !important;
+}
+
+/* "Get to Know More" */
+body.light-mode #about .section__text__p1 {
+  color: #000 !important;
+}
+
+/* About section content: internship, education */
+body.light-mode .details-container p {
+  color: #000 !important;
+}
+
+/* About section headings */
+body.light-mode .details-container h3 {
+  color: #000 !important;
+}
+
+/* Any remaining light-grey text */
+body.light-mode .section__text p {
+  color: #000 !important;
+}
+/* Fix mobile menu bullets */
+#hamburger-nav .menu-links,
+#hamburger-nav .menu-links li {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* Remove underline from mobile links */
+#hamburger-nav .menu-links a {
+  text-decoration: none !important;
+  color: inherit;
+}
